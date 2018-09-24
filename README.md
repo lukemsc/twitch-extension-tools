@@ -7,7 +7,7 @@ A quick and dirty set of useful commands to simplify Twitch extension maintenanc
 ## Prerequisites
 
 * Node.js (preferably LTS version)
-* Twitch API key - to obtain it go to https://dev.twitch.tv/ and register new application
+* Twitch API key (Client ID) - to obtain it go to https://dev.twitch.tv/ and register a new application
 * Command line :-)
 
 ## Setup
