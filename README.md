@@ -1,2 +1,29 @@
 # twitch-extension-tools
-Some CLI tools for developers of Twitch Extensions 
+[![Build Status](https://travis-ci.org/lukemsc/twitch-extension-tools.svg?branch=master)](https://travis-ci.org/lukemsc/twitch-extension-tools)
+[![Build status](https://ci.appveyor.com/api/projects/status/nrl3bl8t192fpvfh?svg=true)](https://ci.appveyor.com/project/lwojcik/twitch-extension-tools)
+
+A quick and dirty set of useful commands to simplify Twitch extension maintenance process. Built with [Vorpal](https://vorpal.js.org/).
+
+## Prerequisites
+
+* Node.js (preferably LTS version)
+* Twitch API key - to obtain it go to https://dev.twitch.tv/ and register new application
+* Command line :-)
+
+## Setup
+
+* Edit `config.js` and add your Twitch API key as a value of `clientID` property
+* Install the dependencies:
+  ```npm install```
+
+## Usage
+
+* `npm start` - launch a CLI interface
+
+Available commands:
+
+* `getUserIds <twitchUsername1 twitchUsername2...>` or `gids <twitchUsername1 twitchUsername2...>` - get user IDs from one or more Twitch usernames. It generates comma-separated list of Twitch IDs. It's useful for creating long lists of accounts permitted to test the extension during hosted testing phase or after the release.
+
+## License
+
+Licensed under MIT License. See [LICENSE](https://raw.githubusercontent.com/lukemsc/twitch-extension-tools/master/LICENSE) for more information.
