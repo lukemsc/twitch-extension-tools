@@ -1,0 +1,30 @@
+{
+  "name": "twitch-extension-tools",
+  "version": "1.0.0",
+  "description": "Some CLI tools for Twitch Extensions developers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukemsc/twitch-extension-tools.git"
+  },
+  "keywords": [
+    "twitch",
+    "extension",
+    "tools",
+    "cli"
+  ],
+  "author": "Łukasz Wójcik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukemsc/twitch-extension-tools/issues"
+  },
+  "homepage": "https://github.com/lukemsc/twitch-extension-tools#readme",
+  "dependencies": {
+    "cross-fetch": "2.2.2",
+    "vorpal": "1.12.0"
+  }
+}
