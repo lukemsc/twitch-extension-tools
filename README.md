@@ -1,6 +1,6 @@
 # twitch-extension-tools
 [![Build Status](https://travis-ci.org/lukemsc/twitch-extension-tools.svg?branch=master)](https://travis-ci.org/lukemsc/twitch-extension-tools)
-[![Build status](https://ci.appveyor.com/api/projects/status/nrl3bl8t192fpvfh?svg=true)](https://ci.appveyor.com/project/lwojcik/twitch-extension-tools)
+[![Build status](https://ci.appveyor.com/api/projects/status/nrl3bl8t192fpvfh?svg=true)](https://ci.appveyor.com/project/lwojcik/twitch-extension-tools) [![Greenkeeper badge](https://badges.greenkeeper.io/lukemsc/twitch-extension-tools.svg)](https://greenkeeper.io/)
 
 A quick and dirty set of useful commands to simplify Twitch extension maintenance process. Built with [Vorpal](https://vorpal.js.org/).
 
