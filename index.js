@@ -4,6 +4,7 @@ const fetch = require('cross-fetch');
 const config = require('./config');
 const TWITCH_API_URL = 'https://api.twitch.tv/helix';
 const TWITCH_LOGIN_ENDPOINT = 'users?login=';
+const TWITCH_ID_ENDPOINT = 'users?id=';
 const TWITCH_CLIENT_ID = config.clientID;
 
 const getDataFromTwitch = async (endpoint) => {
@@ -31,6 +32,18 @@ const getUserId = async (user) => {
   }
 }
 
+const getUserName = async (user) => {
+  try {
+    const response = await getDataFromTwitch(`${TWITCH_API_URL}/${TWITCH_ID_ENDPOINT}${user}`);
+    const userName = await response.data[0].login;
+    return userName;
+  } catch (err) { 
+    console.error(err);
+  }
+}
+
+
+
 const getUserIds = (usersArray) => new Promise((resolve, reject) => {
   try {
     let IdArray = [];
@@ -38,7 +51,7 @@ const getUserIds = (usersArray) => new Promise((resolve, reject) => {
     usersArray.forEach((user, index) => {
       if (index == usersArray.length - 1) {
         setTimeout(async function() {
-          getUserId(user)
+          getUserName(user)
             .then((userId) => {
               IdArray.push(userId);
               resolve(IdArray.join(", "));
@@ -58,9 +71,53 @@ const getUserIds = (usersArray) => new Promise((resolve, reject) => {
   }
 });
 
+const getUserNames = (usersArray) => new Promise((resolve, reject) => {
+  try {
+    let IdArray = [];
+
+    usersArray.forEach((user, index) => {
+      if (index == usersArray.length - 1) {
+        setTimeout(async function() {
+          getUserName(user)
+            .then((userId) => {
+              console.log(userId);
+              IdArray.push(userId);
+              resolve(IdArray.join(", "));
+            });
+        }, 2000 * index);
+      } else {
+        setTimeout(async function() {
+          getUserName(user)
+            .then((userId) => {
+              console.log(userId);
+              IdArray.push(userId);
+            });
+        }, 2000 * index);
+      }
+    });
+  } catch (err) {
+    reject(err);
+  }
+});
+
 vorpal
   .delimiter('twitch-extension-tools$')
   .show();
+
+
+vorpal
+  .command('getUserNames <twitchIds...>')
+  .description('Retrieves Twitch IDs for one or more usernames separated by space')
+  .alias('guns')
+  .action(function(args, callback) {
+    const self = this;
+    getUserNames(args.twitchIds)
+      .then((userNames) => {
+        self.log(userNames);
+        callback();
+      })
+      .catch(err => console.error(err));
+  });
 
 vorpal
   .command('getUserIds <twitchUsernames...>')
