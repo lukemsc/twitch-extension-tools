@@ -6,6 +6,14 @@ patch:
   SNYK-JS-LODASH-450202:
     - vorpal > lodash:
         patched: '2020-03-13T09:14:48.079Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2020-03-13T09:16:07.145Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2020-03-13T09:16:07.145Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2020-03-13T09:16:07.145Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2020-03-13T09:16:07.145Z'
   'npm:lodash:20180130':
     - vorpal > inquirer > lodash:
         patched: '2020-03-13T09:14:48.079Z'
