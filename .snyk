@@ -17,3 +17,38 @@ patch:
   'npm:lodash:20180130':
     - vorpal > inquirer > lodash:
         patched: '2020-03-13T09:14:48.079Z'
+  SNYK-JS-LODASH-567746:
+    - vorpal > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/ruby-semver > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > inquirer > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > snyk-config > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T00:28:26.752Z'
